@@ -1,0 +1,167 @@
+10.1016@j.patrec.2005.06.015.pdf->
+10.1109@CAC.2018.8623538.pdf->Fighting Robot School of Mechatronics Engineering
+101530N.pdf->    Application of Drive Circuit Based on L298N in Direct Current Motor Speed Control System
+1288-2929-1-PB.pdf->Statistical Analysis of Electrical Fire Outbreaks in Buildings:  Case Study of
+25-AF-SzegediPeter,KoronvaryPeter,BekesiBertold.pdf->SCIENTIFIC RESEARCH AND EDUCATION IN THE AIR FORCE – AF ASES2017 THE USE OF ROBOTS IN MILITARY OPERATIONS
+32-Article Text-73-1-10-20220112.pdf->Intelligent Robotic System For Fire Fighting
+508-Article Text-929-1-10-20210816.pdf->IN HOUSING IN NIGERIA
+5301.pdf->ROBOTS IN MEDICINE Heart operations, kidney transplants, and brain surgery: When it comes to complex surgical procedures, doctors are looking to robotics. Robots are making operations less painful, invasive, and risky, while increasing accuracy.The advantages of robot -assisted surgery
+5acc1897e2675b7_ek.pdf->Thermal and structural analys es of firefighting robot H.S. SUCUOGLU Faculty of Engineering  Adnan Menderes University hilmisucuogl u@adu. edu.tr I. BOGREKCI
+85-271-1-SM.pdf->FIRE OUTBREAKS IN  THE SOUTHEAST  NIGERIA  AND INADEQUACIES IN SERVICE  AND FIGHTING S TATIONS
+ajol-file-journals_221_articles_125341_submission_proof_125341-2629-341609-1-10-20151109.pdf->Disaster s in Nigeria: A Public Health P erspectiv e Correspondence to
+An Indoor Autonomous Inspection and Firefighting Robot.pdf->Indoor Autonomous Inspection and
+an-early-firedetection-method-based-on-image-processing.pdf->The paper presents an early fire-alarm raising method based on video processing. The basic idea of the proposed of firc-detcction is to adopt a RGB (rcd, green, hluc) model based chromatic and disorder measurement for extracting fire-pixels and smokc-pixels. The decision function of firc-pix& is mainly deduced by the intensity and saturation of R component. The extracted fire-pixels will be verified if it is a real fire by both dynamics of growth and disorder, and furthcrly smoke. Based on iterative checking on the growing ratio of flames, a fire-alarm is given when the alarm-raising condition is mct. Experimental results show that the developed technique can achieve fully automatic surveillance of fire accident with a lower false alarm rate and thus is very attractive for the important military, social security,commercial  applications, and so on, at a general cost. . INTRODUCTION
+anantharaj2018.pdf->,(((Internet of Robotic Things Based Autonomous Fire Fighting Mobile Robot
+applsci-14-00366.pdf->Autonomous Navigation with Deep
+Arduino_ATMEGA_328_Microcontroller.pdf->
+Automatic Fire Fighting Robot-212.pdf->
+azeta2019.pdf->PAPER • OPEN ACCESS Obstacle detection using ultrasonic sensor for a mobile robot
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(37, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(93, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(21, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(65, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(165, 0, 1749915856816)]
+Back to back fires in Dosumu, Balogun markets raise safety concerns - Businessday NG.pdf->Back to back fires in Dosumu,Balogun markets raise safety concerns
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(65, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(99, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(87, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(60, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(27, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(165, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(126, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(159, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(37, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(123, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(87, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(4, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(165, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(123, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(65, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(60, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(87, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(165, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(130, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(65, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(60, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(87, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(159, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(65, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(60, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(9, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(109, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(136, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(87, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(93, 0, 1749915856816)]
+unknown widths : 
+[0, IndirectObject(60, 0, 1749915856816)]
+binbahrudin2013.pdf->Development of Fire Alarm System using Raspberry Pi and Arduino Uno
+bitmi-datasheet-senzor-ultrasonic-hc-sr04-2702.pdf->HC­SR04UltrasonicSensor ElijahJ.Morgan Nov.162014 ThepurposeofthisfileistoexplainhowtheHC­SR04works.Itwillgiveabrief explanationofhowultrasonicsensorsworkingeneral.Itwillalsoexplainhowtowire thesensoruptoamicrocontrollerandhowtotake/interpretreadings.Itwillalsodiscuss somesourcesoferrorsandbadreadings. .HowUltrasonicSensorsWork .HC­SR04Specifications .Timingchart,PinexplanationsandTaking
+chen2021.pdf->electronics Using Ultrasonic Sensors and a Knowledge-Based Neural Fuzzy Controller for Mobile Robot Navigation Control
+deiacovo2017.pdf->PbS Colloidal Quantum Dot Visible-Blind Photodetector for Early Indoor Fire Detection
+Design and Deployment of an Autonomous Unmanned.pdf->Design and Deployment of an Autonomous Unmanned Ground Vehicle for Urban Fireghting Scenarios
+Design of Home-use Fire Fighting Robots and....pdf->Series PAPER • OPEN ACCESS Design of Home-use Fire Fighting Robots and
+DesigningandTestingofasmartfirefightingdevicesystemLAHEEB.pdf->
+Design_and_Fabrication_of_an_Autonomous Tawfiqur Rakib.pdf->`Design and Fabrication of an Autonomous Fire Fighting Robot with Multisensor Fire Detection Using PID Controller Tawfiqur Rakib
+Development_of_Fire_Fighting_Robot.pdf->Research and Applications: Embedded System Development of Fire Fighting Robot
+Development_of_Fire_Fighting_Robot_QRob.pdf->Malaysian Institute of Industrial Technology Universiti Kuala Lumpur
+Dosunmu market fire victims count losses in hard times.pdf->
+fadeyibi2011.pdf->
+fin_ijprems1714036552.pdf->RESEARCH IN ENGINEERING MANAGEMENT Impact
+fire_fighting_robot.pdf->
+gubbi2009.pdf->Smoke detection in video using wavelets and support vector machines
+hassanein2015.pdf->An Autonomous  Firefighting Robot
+IET Image Processing - 2015 - Yuan - Real‐time image smoke detection using staircase searching‐based dual threshold.pdf->
+Implementation of rover tank firefighting robot for closed areas based on arduino microcontroller.pdf->Implementation of rover tank reghting robot for closed areas based on arduino microcontroller
+Ismail_2016_IOP_Conf._Ser.__Mater._Sci._Eng._152_012064.pdf->Science and Engineering PAPER • OPEN ACCESS Obstacle-avoiding robot with IR and PIR motion sensors
+Jalani_2019_IOP_Conf._Ser.__Mater._Sci._Eng._637_012002.pdf->Science and Engineering PAPER • OPEN ACCESS Automatic fire fighting robot with notification
+kahn2018.pdf->Berkeley AI Research (BAIR), University of California, Berkeley Abstract — Enabling robots to autonomously navigate complex environments is essential for real-world deployment. Prior methods approach this problem by having the robot maintain an internal map of the world, and then use a localization and planning method to navigate through the internal map.However, these approaches often include a variety of assumptions, are computationally intensive, and do not learn from failures. In contrast, learning-based methods improve as the robot acts in the environment, but are difcult to deploy in the real-world due to their high sample complexity. To address the need to learn complex policies with few samples, we propose a generalized computation graph that subsumes value-based model-free methods and model-based methods, with specic instantiations interpolating between model-free and model-based.We then instantiate this graph to form a navigation model that learns from raw images and is sample efcient. Our simulated car experiments explore the design decisions of our navigation model, and show our approach outperforms single-step and
+kim2017.pdf->A self-navigating robot using Fuzzy Petri nets
+Lagos closes Dosumu market to demolish unsafe buildings after fire - Businessday NG.pdf->Lagos closes Dosumu market to demolish unsafe buildings after fire
+Lagos fire incidents claim 82 lives, destroy properties worth N25bn.pdf->ByTosin Oy ediran Commissioner for Special Duties and Intergovernmental Relations, Mr Olugbenga
+Low_Cost_obstalce_avoidance_robot.pdf->This obstacle avoidance robot was built with an
+machines-06-00018.pdf->machines Obstacle Avoidance System for Unmanned Ground Vehicles by Using Ultrasonic Sensors
+Majia tanker crash_ Fire kills 153 people in Nigeria searching for fuel after accident.pdf->BBC News, KanoShare Save Isyaku Rabiu
+Modelling, Simulation and Mechatronics Design of a Wireless Automatic.pdf->Fire Fighting Surveillance Robot
+Motion Control System Design for a Flying-Type Firefighting.pdf->actuators Motion Control System Design for a Flying-Type Fireghting System with Water Jet Actuators
+no_series_83.pdf->Exploration, Navigation and Self-Localization in an Autonomous Mobile Robot
+OBSTACLE_AVOIDANCE_ROBOTIC_VEHICLE_USING.pdf->OBSTACLE AVOIDANCE ROBOTIC VEHICLE USING ULTRASONIC SENSOR,ARDUINO CONTROLLER
+Pandey.pdf->Mobile Robot Navigation and Obstacle Avoidance Techniques: A Review
+QuickBlaze-compressed.pdf->QuickBlaze: Early Fire Detection Using a Combined Video Processing Approach
+Reading-2-Robotics Research.pdf->From Industrial Robotics to Field and Service Robotics
+RobotsforFightingFiresAComparativeAnalysis.pdf->Robots for Fighting Fires: A Comparative Analysis
+sensors-18-00553-v4.pdf->sensors Review Chemical Sensor Systems and Associated Algorithms for Fire Detection: A Review
+sensors-20-06442.pdf->sensors Review A Review on Early Forest Fire Detection Systems Using Optical Remote Sensing
+sensors-22-03310.pdf->
+SJET_113_84-90_2M613bc.pdf->Citation:  Asha Saturday & Ikebudu Kingsley O . Design and Development of an Unmanned Fire Fighting Robot . Sch J Abbreviated Key Title: Sch J Eng Tech
+Tarıyan Özyer, Sibel.pdf->Remote and Autonomous Controlled Robotic Car based on Arduino with Real Time Obstacle Detection and Avoidance
+THE DEVELOPMENT OF FIRE DETECTION ROBOT.pdf->REPUBLIC OF TURKEY ADNAN MENDERES UNIVERSITY GRADUATE SCHOOL OF NATURAL AND APPLIED SCIENCES
+The Different Classes of Fire & How to Extinguish Each.pdf->Undersanding Classification of Fires Wha are the Differen Types of
+The History of Robots_ Leonardo Da Vinci_ Robot Knight.pdf->Kids
+The Origin Of The Word 'Robot'.pdf->04/22/2011 The Origin Of The Word ‘Robot’  b READ TRANSCRIPTM ORE FROM  THIS EPISODE Introducing Science Diction, a new podcast fr om Science F riday Introducing Science Diction, a new podcast fr om Science F ridayrr
+TNN05.pdf->An Analysis of Neural Models for Walking Control
+yi2004.pdf->

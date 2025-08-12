@@ -1,0 +1,64 @@
+10.1016@j.patrec.2005.06.015.pdf->Computer vision based method for real-time ﬁre and ﬂame detectionq
+10.1109@CAC.2018.8623538.pdf->Fighting Robot Ya-zhou Jia School of Mechatronics Engineering
+101530N.pdf->Application of Drive Circuit Based on L298N in Direct Current Motor Speed Control System
+1288-2929-1-PB.pdf->Statistical Analysis of Electrical Fire Outbreaks in Buildings:  Case Study of Lagos State, Nigeria
+25-AF-SzegediPeter,KoronvaryPeter,BekesiBertold.pdf->SCIENTIFIC RESEARCH AND EDUCATION IN THE AIR FORCE – AF ASES2017221 THE USE OF ROBOTS IN MILITARY OPERATIONS Service, Budapest, Hungary (bekesi.bertold@uni -nke.hu)DOI: 10.19062/2247 -3173.2017.19.1. 25
+32-Article Text-73-1-10-20220112.pdf->Intelligent Robotic System For Fire Fighting
+508-Article Text-929-1-10-20210816.pdf->THE ROLE OF DESIGN AND CONSTRUCTION IN MITIGATING F IRE DISASTERS IN HOUSING IN NIGERIA
+5301.pdf->УДК  802.0:61 ROBOTS IN MEDICINE
+5acc1897e2675b7_ek.pdf->Thermal and structural analys es of firefighting robot
+85-271-1-SM.pdf->FIRE OUTBREAKS IN  THE SOUTHEAST  NIGERIA  AND INADEQUACIES IN SERVICE  AND FIGHTING S TATIONS Introduction
+ajol-file-journals_221_articles_125341_submission_proof_125341-2629-341609-1-10-20151109.pdf->Disaster s in Nigeria: A Public Health P erspectiv e Correspondence to Joshua, Istif anus Anek oson E-mail- dristifan us@yahoo .com1
+An Indoor Autonomous Inspection and Firefighting Robot.pdf->
+an-early-firedetection-method-based-on-image-processing.pdf->ABSTRACT
+anantharaj2018.pdf->,(((Internet of Robotic Things Based Autonomous Fire Fighting Mobile Robot Anantha Raj P
+applsci-14-00366.pdf->Autonomous Navigation with Deep Reinforcement Learning Techniques
+Arduino_ATMEGA_328_Microcontroller.pdf->
+Automatic Fire Fighting Robot-212.pdf->Paper Publications  Automatic Fire Fighting Robot
+azeta2019.pdf->PAPER • OPEN ACCESS Obstacle detection using ultrasonic sensor for a mobile robot
+Back to back fires in Dosumu, Balogun markets raise safety concerns - Businessday NG.pdf->NGXGROUP24.20+0.70 (+2.98%)DNGNUSD0.000560+0.000005 (+0.90%)NGNGBP0.00046100.0000000 (0.00%)NGNEUR0.0005560.000000 (0.00%)NNGNOE NGNJPY0.09201+0.00056 (+Home > News > Back to back res in Dosumu, Balogun markets raise safety concerns Back to back fires in Dosumu,Balogun markets raise safety concerns
+binbahrudin2013.pdf->Development of Fire Alarm System using Raspberry Pi and Arduino Uno Md Saifudaullah Bin Bahrudin
+bitmi-datasheet-senzor-ultrasonic-hc-sr04-2702.pdf->HC­SR04UltrasonicSensor Nov.162014 ThepurposeofthisfileistoexplainhowtheHC­SR04works.Itwillgiveabrief explanationofhowultrasonicsensorsworkingeneral.Itwillalsoexplainhowtowire thesensoruptoamicrocontrollerandhowtotake/interpretreadings.Itwillalsodiscuss somesourcesoferrorsandbadreadings.1.HowUltrasonicSensorsWork2.HC­SR04Specifications3.Timingchart,PinexplanationsandTaking
+chen2021.pdf->electronics Using Ultrasonic Sensors and a Knowledge-Based Neural Fuzzy Controller for Mobile Robot Navigation Control
+deiacovo2017.pdf->PbS Colloidal Quantum Dot Visible-Blind Photodetector for Early Indoor Fire Detection
+Design and Deployment of an Autonomous Unmanned.pdf->Design and Deployment of an Autonomous Unmanned Ground Vehicle for Urban Fireghting Scenarios Kshitij Jindal
+DesigningandTestingofasmartfirefightingdevicesystemLAHEEB.pdf->Umm Al-Qur a Univ ersity245 PUBLICA TIONS 3,912  CITATIONS
+Design_and_Fabrication_of_an_Autonomous Tawfiqur Rakib.pdf->`Design and Fabrication of an Autonomous Fire Fighting Robot with Multisensor Fire Detection Using PID Controller Tawfiqur Rakib
+Development_of_Fire_Fighting_Robot.pdf->HBRP Publication Page 1-8 2020. All Rights Reserved                                                                Page 1 Research and Applications: Embedded System Volume 3 Issue 2 Development of Fire Fighting Robot
+Development_of_Fire_Fighting_Robot_QRob.pdf->Malaysian Institute of Industrial Technology Universiti Kuala Lumpur
+Dosunmu market fire victims count losses in hard times.pdf->By Babatunde Titilola
+fadeyibi2011.pdf->
+fin_ijprems1714036552.pdf->RESEARCH IN ENGINEERING MANAGEMENT Impact
+fire_fighting_robot.pdf->
+gubbi2009.pdf->Smoke detection in video using wavelets and support vector machines Jayavardhana Gubbi/C3, Slaven Marusic, Marimuthu Palaniswami
+hassanein2015.pdf->An Autonomous  Firefighting Robot Ahmed Hassanein, Mohanad Elhawary, Nour Jaber , and Mohammed El -Abd
+IET Image Processing - 2015 - Yuan - Real‐time image smoke detection using staircase searching‐based dual threshold.pdf->
+Implementation of rover tank firefighting robot for closed areas based on arduino microcontroller.pdf->Implementation of rover tank ﬁreﬁghting robot for closed areas based on arduino microcontroller
+Ismail_2016_IOP_Conf._Ser.__Mater._Sci._Eng._152_012064.pdf->Science and Engineering PAPER • OPEN ACCESS Obstacle-avoiding robot with IR and PIR motion sensors
+Jalani_2019_IOP_Conf._Ser.__Mater._Sci._Eng._637_012002.pdf->Science and Engineering PAPER • OPEN ACCESS Automatic fire fighting robot with notification
+kahn2018.pdf->Self-supervised Deep Reinforcement Learning with Generalized Computation Graphs for Robot Navigation Gregory Kahn, Adam Villaﬂor, Bosen Ding, Pieter Abbeel, Sergey Levine
+kim2017.pdf->A self-navigating robot using Fuzzy Petri nets Seung-yun Kim, Yilin Yang PII: S0921-8890(16)30226-3
+Lagos closes Dosumu market to demolish unsafe buildings after fire - Businessday NG.pdf->NGXGROUP24.20+0.70 (+2.98%)DNGNUSD0.000560+0.000005 (+0.90%)NGNGBP0.00046100.0000000 (0.00%)NGNEUR0.0005560.000000 (0.00%)NNGNOE
+Lagos fire incidents claim 82 lives, destroy properties worth N25bn.pdf->Lagos re incidents claim 82 lives, destroy properties worth N25bn20th Ma y 2024 ByTosin Oy ediran
+Low_Cost_obstalce_avoidance_robot.pdf->
+machines-06-00018.pdf->machines Obstacle Avoidance System for Unmanned Ground Vehicles by Using Ultrasonic Sensors
+Majia tanker crash_ Fire kills 153 people in Nigeria searching for fuel after accident.pdf->Mansur Abubakar BBC News, KanoShare Save Isyaku Rabiu
+Modelling, Simulation and Mechatronics Design of a Wireless Automatic.pdf->
+Motion Control System Design for a Flying-Type Firefighting.pdf->actuators Motion Control System Design for a Flying-Type Fireﬁghting System with Water Jet Actuators
+no_series_83.pdf->Autonomous Mobile Robot
+OBSTACLE_AVOIDANCE_ROBOTIC_VEHICLE_USING.pdf->OBSTACLE AVOIDANCE ROBOTIC VEHICLE USING ULTRASONIC SENSOR,ARDUINO CONTROLLER
+Pandey.pdf->Mobile Robot Navigation and Obstacle Avoidance Techniques: A Review
+QuickBlaze-compressed.pdf->QuickBlaze: Early Fire Detection Using a Combined Video Processing Approach
+Reading-2-Robotics Research.pdf->Introduction
+RobotsforFightingFiresAComparativeAnalysis.pdf->Robots for Fighting Fires: A Comparative Analysis
+sensors-18-00553-v4.pdf->sensors Review Chemical Sensor Systems and Associated Algorithms for Fire Detection: A Review
+sensors-20-06442.pdf->sensors Review A Review on Early Forest Fire Detection Systems Using Optical Remote Sensing
+sensors-22-03310.pdf->Recent Advances in Sensors for Fire
+SJET_113_84-90_2M613bc.pdf->Abbreviated Key Title: Sch J Eng Tech
+Tarıyan Özyer, Sibel.pdf->Remote and Autonomous Controlled Robotic Car based on Arduino with Real Time Obstacle Detection and Avoidance
+THE DEVELOPMENT OF FIRE DETECTION ROBOT.pdf->REPUBLIC OF TURKEY GRADUATE SCHOOL OF NATURAL AND APPLIED SCIENCES
+The Different Classes of Fire & How to Extinguish Each.pdf->Undersanding Classification of Fires Table of Conens
+The History of Robots_ Leonardo Da Vinci_ Robot Knight.pdf->Vinci: Robot Knight, Self-Driving Cart,and Robot Lions: History Podcast For Kids Leonardo Davinci Robot Knight Self Driving Cart and Robot Lions History Podcast For Kids
+The Origin Of The Word 'Robot'.pdf->04/22/2011 The Origin Of The Word ‘Robot’b X
+TNN05.pdf->Richard Reeve and John Hallam Index Terms— Genetic algorithms, legged locomotion, neural model comparison, walking control
+yi2004.pdf->

@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "Lit_Buddy",
+			"path": "."
+		},
+		{
+			"name": "Lit-Review",
+			"path": "../Undergrad/project/Lit-Review"
+		},
+		{
+			"name": ".venv",
+			"path": "../Chatbot/.venv"
+		}
+	],
+	"settings": {}
+}

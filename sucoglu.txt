@@ -1,0 +1,520 @@
+Thermal and structural analyses of firefighting 
+robot  
+ 
+H.S. SUCUOGLU  
+Department of Mechanical Engineering  
+Faculty of Engineering Adnan Menderes University  
+hilmisucuoglu@adu.edu.tr 
+I. BOGREKCI 
+Department of Mechanical Engineering  
+Faculty of Engineering Adnan Menderes University  
+ibogrekci@adu.edu.tr
+P. DEMIRCIOGLU 
+Department of Mechanical Engineering  
+Faculty of Engineering Adnan Menderes University  
+pinar.demircioglu@adu.edu.tr 
+A. KARABULUT 
+Department of Mechanical Engineering  
+Faculty of Engineering Adnan Menderes University  
+121802002@stu.adu.edu.tr
+ 
+ 
+Abstract—In this study, designed firefighting robot especially 
+for forest fires was analysed using Computer Aided Engineering 
+(CAE) methods. Structural and thermal analyses were carried 
+out after the frame and shell design of the robot body and 
+material selection. To determine the structural strength of robot 
+static forces (self-weight of the chassis and additional forces 
+arising from other components of the robot such as wheels, 
+pallet and diesel engine) were applied to chassis frame. To get 
+more reliable results, the structural analysis was conducted with 
+three different forces as 750, 1,000 and 2,000 kg. Occurred 
+stress, strain, displacement and safety factor values were 
+computed. In thermal part; a heat-insulating and fireproof plate 
+was built. Robot shell was composed with three parts using; 
+galvanized steel with the thickness of 5 mm as the main plate, 5 
+µm cubic boron nitride coating for non-flammability and  50 
+mm silica aerogel for  thermal insulation. After design and 
+combination process, thermal insulation calculations and 
+analysis were conducted using Matlab and Ansys Workbench 
+Steady State Thermal tools. Heat energy of the fire was 
+transferred to shell combination with convection and radiation. 
+The temperature gradient of fire was derived using required 
+logarithmic function. The numeric calculations and analysis 
+were carried out for 30, 300, 900 and 1,800 seconds time 
+intervals. The temperature variation of the ambient and inside 
+area temperatures and insulation properties of the combined 
+shell material were obtained from calculations and analysis. The 
+results were compared. Structural analysis showed that the yield 
+strength of the selected material for chassis (AISI 1018) was 
+almost five times more than occurred maximum stress with 
+2,000 kg forces. It was obtained from thermal computations and 
+analysis that while temperature of the environment was almost 
+1,450 °C, the inside area was about 34 °C. The designed and 
+combined shell material provided extremely great insulation 
+(about %98) that has vital importance for firefighting.  
+ 
+Keywords—computer aided engineering; firefighting; non-
+flammability; thermal computations and analysis;  
+I. INTRODUCTION  
+Since human kind first encountered with fire, besides the 
+fact that they have utilized from it, they needed to combat 
+against it. Along with this combat action, it can be considered 
+that early intervention to fire, securing the lives of firefighters, 
+and saving lives of people who trapped within the fire are the 
+key elements of this combat. In Turkey; 1,200 forest fire 
+incidents are reported; and 22,000 ha forest area is destroyed 
+annually [1]. Despite knowledge of safety know-hows, people 
+all over the world still confront frequent explosion and fire 
+hazards [2]. Forest fires generally results in environmental 
+pollution and destruction [3].  
+MVF-5 [4] is a multifunctional firefighting robot that 
+manufactured by Croatian company in 2013 DOK-ING to 
+control the fires in unreachable areas and life threatening 
+conditions. It is a remote controlled machine that operated 
+with GPS-INS (Global Position and Inertial Navigation) 
+System. MVF-5 extinguishes the fires with high-pressure 
+cannon on hydraulic arm which pumps the water up to 55 
+meters away without intervention of firefighters. This 
+machine has a high temperature resistant shield and fireproof 
+coating to protect the system from external high temperature 
+conditions and big flames. MVF-5 is able to withstand 700 ˚C 
+for 15 minutes or 400 ˚C for 30 minutes. It has capability to 
+carry 2,200 liters water and 500 liters foam tanks. Usage areas 
+of MVF- 5 are oil refineries and terminals, military storages, 
+chemical plants and nuclear power plants. Martinson et al. [5] 
+developed a robot (Octavia) which can be used as a team 
+member for firefighting tasks in 2012. In the system, when 
+human team leader indicates the location of the fire using 
+speech-gesture and clears the obstacles, robot finds the exact 
+location of the fire with its sensors and extinguishes the fire 
+with CAF (compressed air foam) system. Octavia has 48 DoF 
+in body, arms and head. It is mounted on a two wheeled 
+Segway base for mobility. Robot uses the perceptual system 
+to understand what team leader means and behaves correctly. 
+Today, many computer-based tools have been available to 
+help design and analysis cycle of robots [6]. Solid modelling 
+using CAD methods assists the robot designers to define the 
+parts and assembly of the system and to utilize the geometry 
+in applications such as simulation, analysis and prototyping. 
+Virtual prototype simulations, static, kinematic, dynamic and 
+thermal analyses can be conducted with CAE methods [7]. 
+ 
+In this article we focused on the structural and thermal 
+analyses of designed firefighting robot. In structural part; 
+static forces were applied to chassis frame to determine the 
+structural strength of robot. Occurred stress, strain, 
+displacement and safety factor values were computed. In 
+thermal part of the study; thermal insulation calculations and 
+analysis were conducted using Matlab and Ansys Workbench 
+Steady State Thermal tools. 
+II. DESIGN OF FIREFIGHTING ROBOT  
+In the mechanical design process of the firefighting robot 
+several issues were considered such as compact size, 
+sufficient stiffness, toughness, management of time and cost. 
+Components of the robot were drawn using parametric solid 
+modelling technique. Subsequently, created parts were 
+assembled to build up the 3D model. Design of the robot is 
+shown in Figure 1. 
+ 
+A. Design Specifications 
+The robot was designed to carry out the special 
+firefighting tasks that occur at open areas. These types of fire 
+disasters generally occur at the forests and mountains. So it is 
+too hard to reach to fire area using conventional firefighting 
+vehicles. There are two main problems; hard terrestrial 
+conditions and slope. To handle these problems; body shell 
+of the robot was designed with the combination of galvanized 
+steel with the thickness of 5 mm as the main plate, 5 µm cubic 
+boron nitride coating for non-flammability and  50 mm silica 
+aerogel for thermal insulation. That can be called as 
+composite structure that provide light, non-flammability and 
+excellent heat insulation features. By using this combination 
+robot can be produced light, compact, fast and robust to 
+operate in tough terrestrial environmental conditions.  
+ 
+A special traction system that comprise the wheels and 
+pallet was developed to answer the condition of working 
+environment. Wheels and pallet were connected to robot 
+chassis with hydraulic cylinders. If more speed is required for 
+the case; the pallet system is pulled up by the mechanism via 
+cylinders and robot can move faster. In other case; if the 
+environment has greater slope angle and ground is muddy 
+soil, in addition to wheels pallet system is added to motion 
+for more traction to prevent sliding and spinning. 
+ 
+The designed robot has ability to enter the fire zone that 
+has vital importance for firefighting operations. In some fire 
+scenarios that is almost impossible to reach to flame from 
+distance. So fireman try to come close to fire zone and that 
+may cause to injuries and loss of lives. To handle these 
+problems; body of the robot was designed to resist fire up to 
+30 minutes and 1400 °C without any fault. Body shell 
+combination of the robot can protect the components such as 
+batteries, electric motors, drivers, cables and etc. from fire.  
+In this time period the fireman can enter the robot and wait 
+for the help safely. This feature of the robot is tested with 
+experimental applications in the future works. With the 
+additional features explained above the designed firefighting 
+robot is expected to be stronger, faster, more technological 
+and efficient for firefighting operations. 
+ 
+ 
+Fig. 1. Design of firefighting robot  
+ 
+B. Material of Firefighting Robot 
+Since the synthesis of the boron nitride in its cubic 
+crystallographic structure, Cubic Boron Nitride (cBN) is a 
+material that has exceptionally high hardness and special 
+properties. For practical use, cBN is, after diamond, the 
+second known hardest material and is today being increasingly 
+used as cutting and drilling tools in substitution for diamond 
+based tools owing to superior thermal stability and chemical 
+inertness. Contrary to diamond, its structure is stable up to 
+2,000 °C. In addition, the decrease in the hardness of diamond 
+is accentuated beyond 500 °C becoming inferior to that of 
+cBN at 800 °C and above. Furthermore, it was realized that 
+cBN stayed inert in contact with steels, cast irons, and super 
+alloys at operational conditions for which diamond would 
+react and loose machinability [8].  
+Silica aerogels have high porosity, extremely low density 
+solids composed of interconnected particles that form an open 
+nanostructure. As a result of the low thermal conductivity of 
+silica and nanometer pore sizes the thermal conductivity of 
+silica aerogel is very low. Low thermal conductivity and 
+optical properties make silica aerogels desirable for insulating 
+applications such as cover layers for windows and solar 
+collectors. The properties of aerogels that make them such 
+good insulators also make them inherently fragile and brittle 
+[9]. 
+AISI 1018 mild/low carbon steel has excellent weldability 
+and produces a uniform and harder case and it is considered as 
+the best steel for carburized parts. AISI 1018 mild/low carbon 
+steel offers a good balance of toughness, strength and 
+ductility. Provided with higher mechanical properties, AISI 
+1018 hot rolled steel also includes improved machining 
+characteristics and Brinell hardness. Specific manufacturing 
+controls are used for surface preparation, chemical 
+composition, rolling and heating processes. All these 
+processes develop a supreme quality product that are suited to 
+fabrication processes such as welding, forging, drilling, 
+machining, cold drawing and heat treating. 
+Robot shell was consisted of using; galvanized steel with 
+the thickness of 5 mm as the main plate, 5 µm cubic boron 
+nitride coating for non-flammability and  50 mm silica aerogel 
+for  thermal insulation. AISI 1018 steel was selected as chassis 
+frame material. The mechanical and thermal properties of 
+AISI 1018 steel, silica aerogel and galvanized steel and cubic 
+boron nitride are given in Table I. 
+TABLE I. MECHANICAL AND THERMAL PROPERTIES OF 
+MATERIALS 
+ 
+Mechanical Properties of Materials  
+ 
+Properties of 
+Material 
+AISI 
+1018 
+Steel 
+Silica 
+Aerogel 
+Galvanized 
+Steel 
+Cubic 
+Boron 
+Nitride 
+1 
+Density ρ (g/cm3)  
+7.87 
+0.1 
+7.85 
+3.49 
+2 
+Young Modulus E 
+(GPa) 
+205 
+0.001-0.1 
+200 
+41-97 
+3 
+Ultimate Tensile 
+Strength σts (MPa) 
+440 
+0.0160 
+310-393 
+41-55 
+4 
+Yield Strength σy  
+(MPa) 
+370 
+- 
+241-338 
+- 
+5 
+Poisson Ratio v  
+0.29 
+0.24 
+0.29 
+- 
+6 
+Shear Modulus G 
+(GPa) 
+80 
+0.00042-
+0.004 
+80 
+- 
+ 
+Thermal Properties of Materials 
+ 
+7 
+Specific Heat 
+Capacity Cp (J/g.˚C) 
+0.486 
+840 
+0.470 
+0.793 
+8 
+Thermal 
+Conductivity k 
+(W/m.K) 
+51.9 
+0.004 
+52 
+20 
+ 
+III. STRUCTURAL ANALYSIS 
+In order to determine the structural behavior of firefighting 
+robot on the model characteristic static analysis was carried 
+out using Finite Element Analysis (FEA). This approach 
+increased the design process progress and efficiency [10, 11]. 
+The force applied chassis area was about 0.7 m2. 750, 1,000 
+and 2,000 kg forces were applied to chassis. Therefore; 
+structural analysis was executed with 10, 14 and 28 kPa 
+pressures forces and standard earth gravity. 
+Structural 
+analysis 
+was 
+conducted 
+using 
+Ansys 
+Workbench Static Structural Module. Safety factors, 
+maximum equivalent stresses and strains for whole chassis 
+frame were calculated. 
+The parameters obtained from design environment such as 
+dimensions, component weights etc. were used as input for 
+analysis. The material of the chassis was defined as AISI 1018 
+also known as structural steel. Before the computation, the 
+model was simplified to increase the analysis speed and 
+computation precision. The finite element model of the robot 
+arm was composed of 86,619 nodes and 17,988 elements. 
+Mesh view of the chassis is shown in Figure 2.  
+Fig. 2. Structural analysis mesh view  
+IV. THERMAL COMPUTATIONS AND ANALYSIS 
+Thermal calculations and analysis were carried out for 
+specified 1x1 m2 section area of robot shell combination. Heat 
+transfer was occurred from fire ambient to shell with 
+convection and radiation. The temperature gradient of fire was 
+derived using required logarithmic function (1) [12].  
+𝑇= 345 𝑙𝑜𝑔10 (8𝑡 +  1) +  20                                          (1) 
+Heat transfer from fire ambient to interior surface was 
+calculated using (2). 
+𝑄(𝑡) =
+𝑇∞1−𝑇∞2
+𝑅𝑡𝑜𝑡𝑎𝑙                                                              (2) 
+In where; “T∞1” represents the temperature gradient of fire, 
+“T∞2” is temperature of inside air. “Rtotal” total thermal 
+resistivity of all system was calculated using thermal 
+resistivity all of the elements (3). 
+𝑅𝑡𝑜𝑡𝑎𝑙=
+𝐿
+𝑘𝐴+
+1
+ℎ𝑐𝑜𝑚𝑏𝑖𝑛𝑒𝑑𝐴                                                   (3) 
+“L” use as thickness of layers, “k” represents the thermal 
+conductivity of selected shell material. As fire behaves as an 
+infinite thermal energy source for specified time interval and 
+ambient temperature assumed as constant, Steady State 
+solution method was applied. 
+The numeric calculations and analysis were carried out for 
+30, 300, 900 and 1,800 seconds time intervals. The 
+temperature variation of the fire ambient, inside area and 
+insulation properties of the combined shell material were 
+obtained from calculations and analysis (Figure 3).  
+ 
+Fig. 3. Thermal resistance network from fire to inside 
+ 
+V. RESULTS AND DISCUSSION 
+A. Structural Analysis 
+Structural analysis results under static loads are given in 
+Table II. 
+ 
+TABLE II. STRUCTURAL ANALYSIS RESULTS 
+Criteria 
+Values 
+Applied Force (kg) 
+750 
+1,000 
+2000 
+Maximum Deformation (mm) 
+0.08 
+0.1 
+0.2 
+Equivalent Stress (MPa) 
+28 
+35.6 
+66 
+Equivalent Strain (mm/mm) 
+0.00015 
+0.00018 
+0.00034 
+Safety Factor 
+13 
+10 
+5 
+ 
+The total calculated displacements for 750, 1,000 and 
+2,000 kg were about 0.08, 0.1 and 0.2 mm, respectively. 
+According to Mott’s recommendation for machine member’s 
+deflection ranges (from 0.0005 to 0.003 m/m) [13] 
+displacements are within allowable limits. Maximum stresses 
+are not overcame the yield of the material. It can be 
+understood from the structural analysis that AISI 1018 
+material can be used as chassis frame material for firefighting 
+robot. The factor of safety also indicates that selected chassis 
+material is 5 times stronger for the intended loads. 
+Displacement computation results with Ansys Workbench 
+Static Structural with 750 kg load and self-weight of chassis 
+is shown in Figure 3. 
+ 
+Fig. 3. Displacement calculation results with Ansys Workbench Static 
+Structural 
+ 
+B. Thermal Calculations and Analysis 
+The calculated temperature gradient of fire according to 
+time is shown in Figure 4. As understood from the figure that 
+fire temperature increased extremely fast and reached almost 
+850 °C level in first 30 second period and affected the 
+ambient and robot chassis significantly. After 30 seconds fire 
+temperature increased slower when compared with the first 
+period. Therefore; first time zone between 0-30 seconds is 
+most critical for insulation and non-flammability.  
+ 
+Inside area temperature distribution of firefighting robot 
+with numerical calculations using Matlab for 30 seconds and 
+1,800 seconds time periods is shown in Figure 5. Inside area 
+of the robot was only 32.8 °C while the ambient temperature 
+that affects the robot’s exterior wall was about 850 °C in 30 s 
+time period. The similar scenario was obtained from 1,800 
+seconds calculations.  
+ 
+Although; ambient temperature reached the 1,450 °C the 
+inside area temperature increased only 2 °C from 30 to 1,800 
+seconds time period. These results showed that shell material 
+combination of firefighting robot can provide extremely great 
+insulation and (about %98) and non-flammability feature. 
+ 
+ 
+Fig. 4. Temperature gradient of fire according to time 
+ 
+ 
+(a) 
+ 
+(b) 
+Fig. 5. Inside area temperature distribution (a) 30 seconds (b) 1,800 seconds 
+ 
+Thermal analysis results using Ansys Workbench 
+Steady State Thermal tool is shown in Figure 6. 
+ 
+ 
+Fig. 6. Temperature distribution of analyzed section  
+ 
+Similar results with numeric calculations were obtained from 
+analysis. Inside area temperatures were found as 32.5 and 
+33.5 °C respectively for 30 and 1,800 seconds time periods. 
+When the results of numerical solutions and analysis were 
+compared, negligible errors (about ± 1 °C) were observed 
+caused from decimal differences. The results of the analysis 
+are summarized in Table III. 
+ 
+TABLE III. RESULT SUMMARY OF THERMAL ANALYSIS 
+Criteria 
+Values 
+Time (s) 
+30 
+300 
+900 
+1,800 
+Fire Temperature (°C) 
+841.8 
+1186.2 
+1350.8 
+1454.6 
+Inside Area Temperature (°C) 
+32.596 
+33.1 
+33.4 
+33.539 
+ 
+VI. CONCLUSION 
+ In this study, firefighting robot especially for forest fires was 
+analyzed using Computer Aided Engineering (CAE) 
+methods. Structural and thermal analyses were carried out 
+after the frame and shell design of the robot body and material 
+selection. Occurred stress, strain, displacement and safety 
+factor values were computed with structural analysis using 
+FEA methods. A heat-insulating and fireproof plate was 
+build. Robot shell was composed with three parts using; 
+galvanized steel as the main plate, cubic boron nitride coating 
+for non-flammability and silica aerogel for thermal 
+insulation. Thermal insulation calculations and analysis were 
+conducted using Matlab and Ansys Workbench Steady State 
+Thermal tools. The numeric calculations and analysis were 
+carried out for 30, 300, 900 and 1,800 seconds time intervals. 
+The temperature variation of the ambient and inside area 
+temperatures and insulation properties of the combined shell 
+material were obtained from calculations and analysis. The 
+results were compared. Structural analysis showed that the 
+yield strength of the selected material for chassis (AISI 1018) 
+was five times more than occurred maximum stress with 
+2,000 kg forces. It can be concluded that designed and 
+combined shell material provided extremely great insulation 
+(about %98) that has vital importance for firefighting. 
+ 
+REFERENCES 
+[1] E. Bilgili, “Orman Yangınları,” April 2011.  
+[2]  K. B. Mishra, , K.D. Wehrstedt and H. Krebs,  “Lessons learned from 
+recent fuel storage fires,” Fuel Processing Technology, 107: 166 – 172, 
+2013. 
+[3] I. Haukur,  T. Heimo and L. Anders,  “Industrial fires An Overview,” 
+Brandforsk Project, 2010. 
+[4] C.F. Tan,  S.M. Liew, M.R. Alkahari,  S.S.S. Ranjit,  M.R. Said,  W. 
+Chen, G.W.M. Rauterberg and D.S. Sivarao, “Fire Fighting Mobile 
+Robot: State of the Art and Recent Development,” Australian Journal 
+of Basic and Applied Sciences, 10: 220-230, 2013. 
+[5] E. Martinson, W. Lawson, S. Blisard, A. Harrison and G. Trafton, 
+“Fighting Fires with Human Robot Teams,” International Conference 
+on Intelligent Robots and Systems, IEEE, pp.2682 - 2683, Vilamoura, 
+2012. 
+[6] H.L. Gelgele,  “Study of CAD Integrated Analysis for Complex 
+Structures,” Wang K., Kovacs G., Wozny M., Fang M. (eds.) 
+International Federation for Information Processing (IFIP), vol. 207, 
+pp. 673-678. Springer, Boston, 2006.  
+[7]  K. Park, Y. S. Kim, C. S. Kim and H. J. Park, “Integrated Application 
+of CAD/CAM/CAE And RP for Rapid Development of a Humanoid 
+Biped Robot,” J. Mater. Process. Technol. 187, 609-613,2007. 
+[8] S. N. Monteiro, A. L. D. Skury, M. G. de Azevedo, and G. S. 
+Bobrovnitchii, “Cubic boron nitride competing with diamond as a 
+superhard engineering material–an overview,” Journal of Materials 
+Research and Technology, 2(1), 68-74, 2013. 
+[9] K. E. Parmenter and F. Milstein, “Mechanical properties of silica 
+aerogels”. Journal of Non-Crystalline Solids, 223(3), 179-189, 1998. 
+[10] V. Adams and A. Askenazi, “Building Better Products with Finite 
+Element Analysis,” Cengage Learning ,1999. 
+[11] W.H. Choong and K. B. Yeo, “Structural Design for a 3DOF Robot 
+Lower-Arm via Computer Aided Engineering,” Centre of Materials & 
+Minerals, Universiti Malaysia Sabah. 88999, 8-18, 2007. 
+[12] EN 1363 Fire resistance tests, Notifiedtesting Laboratory in 
+Accordance to European Directive for building products, 
+[13] R.L. Mott, “Machine Elements in Mechanical Design. Digital 
+Designs,” 1992.
