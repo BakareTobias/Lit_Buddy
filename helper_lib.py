@@ -162,11 +162,47 @@ def extract_key_string(final_post_format):
             word = token.text.lower().strip()
             #print(f'{repr(token.text)}->{token.ent_type_}->{spacy.explain(token.ent_type_)}')
             if  (word in flagged_words) or (token.like_url) or  (len(sent)>40): 
-                print(len(sent),sent[0])
+                #print(len(sent),sent[0])
                 sub_sents.remove(sent)
                 break
 
     #print(sub_sents[1])
 
-    title = ' '.join(str(sent) for sent in sub_sents).replace('~','')
-    return (title)
+    key_string = ' '.join(str(sent) for sent in sub_sents)
+    return (key_string)
+
+def form_citations(doc_params):
+    title = doc_params['title']
+    author_str = doc_params['author']
+    year    = doc_params['year']
+    journal = doc_params['journal']
+
+    for key in doc_params:
+        if doc_params[key] == 'N/A':
+            return None,None
+    author_str = list(author_str)
+    author_str.remove('[')
+    author_str.remove(']')
+
+    #Pull out first name
+    for i, letter in  enumerate(author_str):
+        if letter == ' ' or letter == ',':
+            first_name = author_str[:i]
+            first_name = ''.join(letter for letter in first_name)
+            break
+
+    #print(first_name)
+
+    #APA CITATIONS
+    in_text = f'{first_name}({year})'
+    references = f'{author_str}. ({year}). {title}. {journal}'
+
+    APA = {}
+    APA.update({'in_text':in_text,'references':references})
+
+    in_text = f'[x]'
+    references = f'[x] {author_str}. ({year}). {title}. {journal}'
+
+    IEEE = {}
+    IEEE.update({'in_text':in_text,'references':references})
+    return APA, IEEE

@@ -2,31 +2,43 @@ import ollama
 
 # Warm-up so later requests are faster
 ollama.chat(
-    model="llama3.2:3b-instruct-q4_0",
+    model="llama3.2:3b-instruct-q4_0",#mistral 7B
     messages=[{"role": "system", "content": "You are ready to process citation strings."}]
 )
 
-SYSTEM_PROMPT = """"
+SYSTEM_PROMPT = """
 You are an academic citation parser.
-Your only job is to read a given string and return:
-<exact title from the string> ~ [comma-separated list of authors] ~ <exact journal from the string> ~ <exact year of publishing from the string>
+Your only job is to read a given string and return exactly four fields:
+
+1. <Exact title from the string>  
+2. [Comma-separated list of authors only — remove any affiliations, degrees, or extra descriptions]  
+3. <Exact journal name from the string>  
+4. <Exact year of publishing from the string>
 
 Rules:
-- Do not add extra words, commentary, or formatting.
-- Do not guess missing data; if unknown, return \"N/A\" for each missing field.
-- Fix any spelling and punctuation from the input.
-- Output exactly in the format: <Title> ~ [Authors] ~ <Journal> ~ <Year>
+- Output exactly 4 lines in the exact order above.
+- Do not include labels like "Title" or "Year" in the output.
+- If a field is missing, write "N/A".
+- Fix obvious spelling and punctuation errors.
+- For authors: keep only personal names in the order found, separated by commas.
+- Do NOT include affiliations, job titles, institutions, degrees, or locations.
 
-Input: IOP Conference Series: Materials Science and Engineering PAPER • OPEN ACCESS Obstacle detection using ultrasonic sensor for a mobile robot To cite this article: Joseph Azeta et al 2019 IOP Conf. Ser.: Mater. Sci. Eng. 707 012012
-Output: Obstacle detection using ultrasonic sensor for a mobile robot ~ [Joseph Azeta, et al] ~ IOP Conf. Ser.: Mater. Sci. Eng. ~ 2019
 
-Input:  June 2014 Design of a Smart Firefighting Robot M. Kumar, P. Singh, and R. Sharma
-Output: Design of a Smart Firefighting Robot ~ [M. Kumar, P. Singh, R. Sharma] ~ N/A ~ 2014
+Example:
+Input: June 2014 Design of a Smart Firefighting Robot M. Kumar, P. Singh, and R. Sharma
+Output:
+Design of a Smart Firefighting Robot
+[M. Kumar, P. Singh, R. Sharma]
+N/A
+2014
 
-Input: IEEE Transactions on Robotics, Vol. 28, No. 5, Autonomous Navigation in Unknown Environments John Smith and Jane Doe
-Output: Autonomous Navigation in Unknown Environments ~ [John Smith, Jane Doe] ~ IEEE Transactions on Robotics ~ N/A
+Example (what NOT to do):
+❌ Disaster in Nigeria: A Public Health Perspective [Joshua, Istifaanus Anekoson, M.] Department of Community Medicine...
+This is wrong because it includes affiliations. The correct output should only list names.
 
-""" 
+END OF RULES
+"""
+
 
 
 
@@ -45,8 +57,8 @@ def extract_title_and_authors(citation: str):
         messages=messages
     )
     reply = response['message']['content']
-    #print(reply)
-    title, author, journal, year = reply.split('~')
+    print(reply)
+    title, author, journal, year = reply.split('\n')
 
 
     doc_params = {}

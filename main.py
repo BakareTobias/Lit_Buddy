@@ -1,5 +1,5 @@
 import streamlit as st
-from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string
+from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string,form_citations
 from streamlit_helper import display_with_copy
 from ollama_lib import extract_title_and_authors
 
@@ -35,14 +35,30 @@ if pdf:
     st.write("Extracting title...")
     key_string = extract_key_string(doc)
     if key_string != '':
+        print(key_string)
         doc_params = extract_title_and_authors(key_string)
-        #print(key_string)
+        print(doc_params)
         title = doc_params['title']
         authors = doc_params['author']
         year    = doc_params['year']
         journal = doc_params['journal']
         st.write(f'Your title is: {title}')
         st.write(f'Published by {authors} in the year {year} in the journal {journal}')
+
+        APA,IEEE = form_citations(doc_params)
+        if APA != None:
+            col1, col2 = st.columns(2)
+            with col1: 
+                st.write("**APA Citation**")
+                st.write(f'In-text -> {APA["in_text"]}')
+                st.write(f'References -> {APA["references"]}')
+
+            with col2:
+                st.write("**IEEE Citation**")
+                st.write(f'In-text -> {IEEE["in_text"]}')
+                st.write(f'References -> {IEEE["references"]}')
+        else:
+            st.write("Unable to generate citations with incomplete data")
 
     else:
         st.write(f'We are currently unable to generate title for this document. Apologies')
