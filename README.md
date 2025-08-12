@@ -20,8 +20,8 @@ cd Lit_buddy
 pip install -r requirements.txt
 ```
 ## Usage
-Within the Lit_buddy directory, run the following command: ```streamlit run main.py```
-Follow the instructions
+Within the Lit_buddy directory, run the following command in your terminal: ```streamlit run main.py``` and click the link.
+Follow the instructions provided on the webpage.
 
 <img width="1917" height="996" alt="image" src="https://github.com/user-attachments/assets/292dbf7a-003a-4c17-b555-e57d6405de5e" />
 
