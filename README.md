@@ -1,5 +1,5 @@
 # Lit Buddy
-A tool for extracting and formatting academic citations from unstructured PDFs using PDF processing libraries, regex, and LLMs. Hosted via streamlit to provide an easy to interact with GUI
+A tool for extracting and formatting academic citations from unstructured PDFs using PDF processing libraries, regex, Natural Language Processing via spacy and Large Language Models. Hosted via streamlit to provide an easy to interact with GUI
 
 ## Table of Contents
 - [Features](#features)
