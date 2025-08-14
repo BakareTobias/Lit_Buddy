@@ -2,13 +2,14 @@ import ollama
 
 # Warm-up so later requests are faster
 ollama.chat(
-    model="llama3.2:3b-instruct-q4_0",#mistral 7B
-    messages=[{"role": "system", "content": "You are ready to process citation strings."}]
+    model="mistral:7b",#mistral 7B , llama3.2:3b-instruct-q4_0
+    messages=[{"role": "system", "content": "You are ready to process citation strings."}],
+    options = {'temperature':0}
 )
 
 SYSTEM_PROMPT = """
 You are an academic citation parser.
-Your only job is to read a given string and return exactly four fields:
+Your only job is to read a given string and return exactly four lines onf information:
 
 1. <Exact title from the string>  
 2. [Comma-separated list of authors only — remove any affiliations, degrees, or extra descriptions]  
@@ -16,9 +17,10 @@ Your only job is to read a given string and return exactly four fields:
 4. <Exact year of publishing from the string>
 
 Rules:
+- No commentary, no labels, no explanations
 - Output exactly 4 lines in the exact order above.
 - Do not include labels like "Title" or "Year" in the output.
-- If a field is missing, write "N/A".
+- If a field is missing, write "N/A" for each missing field.
 - Fix obvious spelling and punctuation errors.
 - For authors: keep only personal names in the order found, separated by commas.
 - Do NOT include affiliations, job titles, institutions, degrees, or locations.
@@ -32,9 +34,16 @@ Design of a Smart Firefighting Robot
 N/A
 2014
 
-Example (what NOT to do):
-❌ Disaster in Nigeria: A Public Health Perspective [Joshua, Istifaanus Anekoson, M.] Department of Community Medicine...
-This is wrong because it includes affiliations. The correct output should only list names.
+Example:
+Input:  Design of a Smart Firefighting Robot M. Kumar, P. Singh, and R. Sharma
+Output:
+Design of a Smart Firefighting Robot
+[M. Kumar, P. Singh, R. Sharma]
+N/A
+N/A
+
+
+NEVER USE MORE THAN 4 LINES
 
 END OF RULES
 """

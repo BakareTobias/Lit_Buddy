@@ -1,5 +1,5 @@
 import streamlit as st
-from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string,form_citations
+from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string,form_citations,find_related_papers
 from streamlit_helper import display_with_copy
 from ollama_lib import extract_title_and_authors
 
@@ -35,9 +35,9 @@ if pdf:
     st.write("Extracting title...")
     key_string = extract_key_string(doc)
     if key_string != '':
-        print(key_string)
+        #print(key_string)
         doc_params = extract_title_and_authors(key_string)
-        print(doc_params)
+        #print(doc_params)
         title = doc_params['title']
         authors = doc_params['author']
         year    = doc_params['year']
@@ -59,6 +59,12 @@ if pdf:
                 st.write(f'References -> {IEEE["references"]}')
         else:
             st.write("Unable to generate citations with incomplete data")
+
+        related_papers = find_related_papers(title)
+        if related_papers != None:
+            st.write("Possibly Related articles:")
+            for key in related_papers:
+                st.write(related_papers[key])
 
     else:
         st.write(f'We are currently unable to generate title for this document. Apologies')

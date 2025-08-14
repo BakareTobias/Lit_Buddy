@@ -1,6 +1,14 @@
 #EXTRACT AND PREPROCESS PDF
+import random
+import time
 import PyPDF2
 import re
+import serpapi
+import spacy
+from misc import get_project_settings
+
+nlp = spacy.load("en_core_web_sm")
+
 
 def extract_text_from_pdf(pdf_file):
 
@@ -161,7 +169,7 @@ def extract_key_string(final_post_format):
         for token in sent:
             word = token.text.lower().strip()
             #print(f'{repr(token.text)}->{token.ent_type_}->{spacy.explain(token.ent_type_)}')
-            if  (word in flagged_words) or (token.like_url) or  (len(sent)>40): 
+            if  (word in flagged_words)  or  (len(sent)>40): 
                 #print(len(sent),sent[0])
                 sub_sents.remove(sent)
                 break
@@ -178,7 +186,7 @@ def form_citations(doc_params):
     journal = doc_params['journal']
 
     for key in doc_params:
-        if doc_params[key] == 'N/A':
+        if doc_params[key] == 'N/A' or doc_params[key] == '[N/A]' or doc_params[key] == ['N/A']:
             return None,None
     author_str = list(author_str)
     author_str.remove('[')
@@ -206,3 +214,57 @@ def form_citations(doc_params):
     IEEE = {}
     IEEE.update({'in_text':in_text,'references':references})
     return APA, IEEE
+
+def find_related_papers(title):
+    if title in ('N/A', '[N/A]', ['N/A']):
+        return None
+    RESULTS = {}
+    #initialize serp api scraper
+    project_settings = get_project_settings("serp_key.json")
+    api_key = project_settings['API_KEY']
+    client = serpapi.Client(api_key=api_key)
+
+    doc = nlp(title)
+    noun_chunks = list(doc.noun_chunks)
+    for chunk in noun_chunks:
+        result = client.search(
+        q = f'{chunk}',
+        engine = "google_scholar",
+        location = "Lagos, Nigeria",
+        hl = "en",
+        num = "2"
+        )
+
+
+        for i,item in enumerate(result['organic_results']):
+            RESULTS.update({f'{chunk}_{i}_title':item["title"],f'{chunk}_{i}_link':item['link']})
+
+        
+    
+    return RESULTS
+
+#find_related_papers('Firefighting Robot')
+
+""" project_settings = get_project_settings("serp_key.json")
+
+api_key = project_settings['API_KEY']
+client = serpapi.Client(api_key=api_key)
+
+result = client.search(
+q = f'coffee',
+engine = "google_scholar",
+location = "Lagos, Nigeria",
+hl = "en",
+num = "3"
+)
+
+#print(result['organic_results'])
+
+for item in result['organic_results']:
+    print(item["title"])
+    print(item['link'])
+    print(item['snippet'])
+    print('------------------') 
+
+results = find_related_papers('Internet of Things Autonomous Firefighting Robot')
+print(results)"""
