@@ -39,9 +39,9 @@ Pipeline parses a pdf into readable text using PyPDF2, then cleans the ouptut us
 llm is used to extract the title, author, journal, and year of publishing from the key string.
 The parsing and regex work well for formatting 95% of PDF formats tested. 
 In spacy, a custom sentence delimiter is used, but there are situations in which spacy does not acknowledge it. The llm determines the title of a PDF submitted with a ~60% accuracy, but proves inconsistent across wide variety of PDF formats when extracting the other data points.
-In testing,  the llms used for extracting the key info have been optimized for consistent, accurate output via:
-1. prompts that include how to handle examples and possible edge cases.
-2. Temperature parameter being set to 0
+In testing,  the llms used for extracting the key info have been optimized for consistent, accurate output by:
+1. using prompts that include how to handle examples and possible edge cases.
+2. setting the emperature parameter being set to 0 to eliminate randomness in model output
 
 Further optimization solutions, or use of a more powerful language model than the currently used 'mistral:7b' should improve accuracy.
 
