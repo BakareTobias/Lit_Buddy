@@ -6,8 +6,9 @@ A tool for extracting and formatting academic citations from unstructured PDFs u
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
+- [Results](#results)
 
-## Features
+## Features 
 - Extracts titles, authors, journal, and year from research papers in PDF form
 - Supports APA & IEEE citation formats
 - Cleans author lists and removes affiliations automatically
