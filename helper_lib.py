@@ -232,7 +232,7 @@ def find_related_papers(title):
         engine = "google_scholar",
         location = "Lagos, Nigeria",
         hl = "en",
-        num = "2"
+        num = "4"
         )
 
 
