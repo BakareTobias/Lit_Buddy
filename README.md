@@ -41,7 +41,7 @@ The parsing and regex work well for formatting 95% of PDF formats tested.
 In spacy, a custom sentence delimiter is used, but there are situations in which spacy does not acknowledge it. The llm determines the title of a PDF submitted with a ~60% accuracy, but proves inconsistent across wide variety of PDF formats when extracting the other data points.
 In testing,  the llms used for extracting the key info have been optimized for consistent, accurate output by:
 1. using prompts that include examples and how to handle possible edge cases.
-2. setting the emperature parameter being set to 0 to eliminate randomness in model output
+2. setting the temperature parameter to 0 to eliminate randomness in model output
 
 Further optimization solutions, or use of a more powerful language model than the currently used 'mistral:7b' should improve accuracy.
 
