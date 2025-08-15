@@ -9,7 +9,7 @@ A tool for extracting and formatting academic citations from unstructured PDFs u
 - [Results](#results)
 
 ## Features 
-- Extracts titles, authors, journal, and year from research papers in PDF form
+- Extracts title, authors, journal, and year from research papers in PDF form
 - Supports APA & IEEE citation formats
 - Cleans author lists and removes affiliations automatically
 - Works with multiple LLM backends (LLaMA, Mistral, GPT)
