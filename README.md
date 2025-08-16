@@ -27,10 +27,13 @@ Follow the instructions provided on the webpage.
 
 ## Examples
 
+### Landing page 
+<img width="1265" height="1124" alt="image" src="https://github.com/user-attachments/assets/942a8f0c-d70d-4f2a-b3f1-8a0140d98bfe" />
 
-<img width="800" height="500" alt="image" src="https://github.com/user-attachments/assets/292dbf7a-003a-4c17-b555-e57d6405de5e" />
+### Example usage
+<img width="1266" height="1130" alt="image" src="https://github.com/user-attachments/assets/efb8aca0-38e1-48ed-8a45-49449f215436" />
+<img width="1196" height="1124" alt="image" src="https://github.com/user-attachments/assets/f19dfcef-1383-47c7-95f3-9e2f867f8f87" />
 
-![SharedScreenshot](https://github.com/user-attachments/assets/311da0f8-ff63-46ef-959d-36394ca71cde)
 
 
 ## Results
