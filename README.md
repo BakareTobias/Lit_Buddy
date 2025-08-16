@@ -32,7 +32,8 @@ Follow the instructions provided on the webpage.
 
 
 ### Example results
-<img width="1305" height="1113" alt="image" src="https://github.com/user-attachments/assets/8a71f843-0009-4490-8cac-f5abc841e352" />
+<img width="1245" height="927" alt="image" src="https://github.com/user-attachments/assets/3c196e46-9833-460c-b570-21c32fe87dea" />
+
 
 <img width="1222" height="1100" alt="image" src="https://github.com/user-attachments/assets/1b8db16c-2d3e-4076-af61-9f273180b5f3" />
 
