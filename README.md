@@ -21,6 +21,11 @@ git clone https://github.com/BakareTobias/Lit_buddy.git
 cd Lit_buddy
 pip install -r requirements.txt
 ```
+#### Downloading the LLM
+Use this link to download the exe file and then run it - https://ollama.com/download 
+More details here - https://medium.com/@sridevi17j/step-by-step-guide-setting-up-and-running-ollama-in-windows-macos-linux-a00f21164bf3
+
+
 ## Usage
 Within the Lit_buddy directory, run the following command in your terminal: ```streamlit run main.py``` and click the link.
 Follow the instructions provided on the webpage.
