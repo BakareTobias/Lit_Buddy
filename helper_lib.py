@@ -191,7 +191,7 @@ def form_citations(doc_params):
     author_str = list(author_str)
     author_str.remove('[')
     author_str.remove(']')
-
+    authors = ''.join(x for x in author_str)
     #Pull out first name
     for i, letter in  enumerate(author_str):
         if letter == ' ' or letter == ',':
@@ -203,13 +203,13 @@ def form_citations(doc_params):
 
     #APA CITATIONS
     in_text = f'{first_name}({year})'
-    references = f'{author_str}. ({year}). {title}. {journal}'
+    references = f'{authors}. ({year}). {title}. {journal}'
 
     APA = {}
     APA.update({'in_text':in_text,'references':references})
 
     in_text = f'[x]'
-    references = f'[x] {author_str}. ({year}). {title}. {journal}'
+    references = f'[x] {authors}. ({year}). {title}. {journal}'
 
     IEEE = {}
     IEEE.update({'in_text':in_text,'references':references})
