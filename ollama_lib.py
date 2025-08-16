@@ -9,7 +9,7 @@ ollama.chat(
 
 SYSTEM_PROMPT = """
 You are an academic citation parser.
-Your only job is to read a given string and return exactly four lines onf information:
+Your only job is to read a given string and return exactly four lines of information:
 
 1. <Exact title from the string>  
 2. [Comma-separated list of authors only — remove any affiliations, degrees, or extra descriptions]  
@@ -24,6 +24,7 @@ Rules:
 - Fix obvious spelling and punctuation errors.
 - For authors: keep only personal names in the order found, separated by commas.
 - Do NOT include affiliations, job titles, institutions, degrees, or locations.
+- No extra lines
 
 
 Example:

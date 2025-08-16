@@ -186,7 +186,7 @@ def form_citations(doc_params):
     journal = doc_params['journal']
 
     for key in doc_params:
-        if doc_params[key] == 'N/A' or doc_params[key] == '[N/A]' or doc_params[key] == ['N/A']:
+        if doc_params[key] in ('N/A', '[N/A]', ['N/A']):
             return None,None
     author_str = list(author_str)
     author_str.remove('[')
