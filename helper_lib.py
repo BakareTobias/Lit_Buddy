@@ -199,6 +199,9 @@ def form_citations(doc_params):
             first_name = ''.join(letter for letter in first_name)
             break
 
+    #get et al for multiple authors
+    authors = re.sub(r'(\w),.*$', r'\1 et al.', authors)
+
     #print(first_name)
 
     #APA CITATIONS
@@ -268,3 +271,4 @@ for item in result['organic_results']:
 
 results = find_related_papers('Internet of Things Autonomous Firefighting Robot')
 print(results)"""
+
