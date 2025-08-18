@@ -271,7 +271,8 @@ for item in result['organic_results']:
     print(item['link'])
     print(item['snippet'])
     print('------------------') 
-"""
+
 results = find_related_papers('Internet ')
 print(results)
 
+"""
