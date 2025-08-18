@@ -3,7 +3,7 @@ import random
 import time
 import PyPDF2
 import re
-import serpapi
+from serpapi import GoogleSearch
 import spacy
 from misc import get_project_settings
 
@@ -225,21 +225,24 @@ def find_related_papers(title):
     #initialize serp api scraper
     project_settings = get_project_settings("serp_key.json")
     api_key = project_settings['API_KEY']
-    client = serpapi.Client(api_key=api_key)
 
     doc = nlp(title)
     noun_chunks = list(doc.noun_chunks)
     for chunk in noun_chunks:
-        result = client.search(
-        q = f'{chunk}',
-        engine = "google_scholar",
-        location = "Lagos, Nigeria",
-        hl = "en",
-        num = "4"
-        )
+        params = {
+        "q" : f'{chunk}',
+        "engine" : "google_scholar",
+        "api_key": f"{api_key}",
+        "location" : "Lagos, Nigeria",
+        "hl" : "en",
+        "num" : "1"
+        }
 
+        search = GoogleSearch(params)
+        results = search.get_dict()
+        organic_results = results["organic_results"]
 
-        for i,item in enumerate(result['organic_results']):
+        for i,item in enumerate(results['organic_results']):
             RESULTS.update({f'{chunk}_{i}_title':item["title"],f'{chunk}_{i}_link':item['link']})
 
         
@@ -268,7 +271,7 @@ for item in result['organic_results']:
     print(item['link'])
     print(item['snippet'])
     print('------------------') 
-
-results = find_related_papers('Internet of Things Autonomous Firefighting Robot')
-print(results)"""
+"""
+results = find_related_papers('Internet ')
+print(results)
 
