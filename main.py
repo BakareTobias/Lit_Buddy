@@ -73,19 +73,12 @@ if pdf:
         related_papers = find_related_papers(title)
         if related_papers != None:
             st.write("Related articles:")
+            count = 1
             for i,key in enumerate(related_papers):
-                if '_title' in str(key):
-                    st.write(f'[{int(i/2)}] {related_papers[key]}')
-                else:
-                    st.link_button("View paper", f"{related_papers[key]}")
-
+                #Title
+                st.write(f'[{count}] **{related_papers[key][0]}**')
+                st.write(f'**Abstract**: {related_papers[key][1]}')
+                st.write(f'**DOI**: {related_papers[key][2]}')
+                st.link_button("View paper", f"{related_papers[key][3]}")
+                count +=1
             
-
-    #except ValueError as e :
-    #    st.write(e)
-    #    st.write("Your document is too long for SpaCy's processor. Please try something else")
-
-
-    #print(extracted_text)
-    #print(final_post_format)
-    

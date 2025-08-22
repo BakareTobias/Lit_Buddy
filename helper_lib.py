@@ -1,6 +1,5 @@
 #EXTRACT AND PREPROCESS PDF
-import random
-import time
+import requests
 import PyPDF2
 import re
 from serpapi import GoogleSearch
@@ -189,8 +188,11 @@ def form_citations(doc_params):
         if doc_params[key] in ('N/A', '[N/A]', ['N/A']):
             return None,None
     author_str = list(author_str)
-    author_str.remove('[')
-    author_str.remove(']')
+    try:
+        author_str.remove('[')
+        author_str.remove(']')
+    except ValueError:
+        pass
     authors = ''.join(x for x in author_str)
     #Pull out first name
     for i, letter in  enumerate(author_str):
@@ -211,8 +213,8 @@ def form_citations(doc_params):
     APA = {}
     APA.update({'in_text':in_text,'references':references})
 
-    in_text = f'[x]'
-    references = f'[x] {authors}. ({year}). {title}. {journal}'
+    in_text = f'[1]'
+    references = f'[1] {authors}. ({year}). {title}. {journal}'
 
     IEEE = {}
     IEEE.update({'in_text':in_text,'references':references})
@@ -224,55 +226,20 @@ def find_related_papers(title):
     RESULTS = {}
     #initialize serp api scraper
     project_settings = get_project_settings("serp_key.json")
-    api_key = project_settings['API_KEY']
+    api_key = project_settings['springer_key_meta']
+    no_of_results = 3
 
     doc = nlp(title)
     noun_chunks = list(doc.noun_chunks)
     for chunk in noun_chunks:
-        params = {
-        "q" : f'{chunk}',
-        "engine" : "google_scholar",
-        "api_key": f"{api_key}",
-        "location" : "Lagos, Nigeria",
-        "hl" : "en",
-        "num" : "1"
-        }
+        url = f"https://api.springernature.com/meta/v2/json?q={chunk}&api_key={api_key}&s=1&p={no_of_results}"
 
-        search = GoogleSearch(params)
-        results = search.get_dict()
-        organic_results = results["organic_results"]
-
-        for i,item in enumerate(results['organic_results']):
-            RESULTS.update({f'{chunk}_{i}_title':item["title"],f'{chunk}_{i}_link':item['link']})
-
+        response = requests.get(url)
+        data = (response.json())
         
-    
+        for i,item in enumerate(data['records']):
+            RESULTS.update({
+                f'{chunk}_{i}':[item['title'],item['abstract'],item['doi'],item['url'][0]['value']]
+                })
+         
     return RESULTS
-
-#find_related_papers('Firefighting Robot')
-
-""" project_settings = get_project_settings("serp_key.json")
-
-api_key = project_settings['API_KEY']
-client = serpapi.Client(api_key=api_key)
-
-result = client.search(
-q = f'coffee',
-engine = "google_scholar",
-location = "Lagos, Nigeria",
-hl = "en",
-num = "3"
-)
-
-#print(result['organic_results'])
-
-for item in result['organic_results']:
-    print(item["title"])
-    print(item['link'])
-    print(item['snippet'])
-    print('------------------') 
-
-results = find_related_papers('Internet ')
-print(results)
-
-"""
