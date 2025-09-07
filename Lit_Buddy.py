@@ -1,10 +1,9 @@
 import streamlit as st
-from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string,form_citations,find_related_papers
-from streamlit_helper import display_with_copy
+from helper_lib import extract_text_from_pdf,re_formatting,concatenate_stop_word_endings,extract_key_string,form_citations,find_and_sort_related_papers
 from ollama_lib import extract_title_and_authors
 
 import spacy
-nlp = spacy.load("en_core_web_lg")
+nlp = spacy.load("en_core_web_md")
 
 config = {"punct_chars": ['~'],'overwrite':True}
 nlp.add_pipe("sentencizer",config=config)
@@ -69,16 +68,30 @@ if pdf:
                 st.write(f'**References:**  {IEEE["references"]}')
         else:
             st.write("Unable to generate citations with incomplete data")
+        with st.status("Searching similar papers...", expanded=False ) as status:
+            related_papers = find_and_sort_related_papers(title)
 
-        related_papers = find_related_papers(title)
+            if related_papers != None:
+                status.update(label="Search successfull!", state="complete", expanded=False)
+
+            else:
+                status.update(label="Search failed", state="error", expanded=False)
+                
         if related_papers != None:
             st.write("Related articles:")
             count = 1
             for i,key in enumerate(related_papers):
                 #Title
                 st.write(f'[{count}] **{related_papers[key][0]}**')
+                if related_papers[key][-1] > 0.65:
+                    st.badge("Strongly related",  color="green")
+                elif 0.4 <= related_papers[key][-1] <= 0.65:
+                    st.badge("Maybe related", color="grey")
+                elif 0.4 > related_papers[key][-1]:
+                    st.badge("Weak/No relation", color="orange")
                 st.write(f'**Abstract**: {related_papers[key][1]}')
                 st.write(f'**DOI**: {related_papers[key][2]}')
                 st.link_button("View paper", f"{related_papers[key][3]}")
+                st.divider()
                 count +=1
             

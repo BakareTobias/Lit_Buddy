@@ -5,8 +5,8 @@ import re
 from serpapi import GoogleSearch
 import spacy
 from misc import get_project_settings
-
-nlp = spacy.load("en_core_web_sm")
+from keybert import KeyBERT
+nlp = spacy.load("en_core_web_md")
 
 
 def extract_text_from_pdf(pdf_file):
@@ -202,7 +202,7 @@ def form_citations(doc_params):
             break
 
     #get et al for multiple authors
-    authors = re.sub(r'(\w),.*$', r'\1 et al.', authors)
+    authors = re.sub(r'(\w),.*$', r'\1 et al', authors)
 
     #print(first_name)
 
@@ -220,14 +220,14 @@ def form_citations(doc_params):
     IEEE.update({'in_text':in_text,'references':references})
     return APA, IEEE
 
-def find_related_papers(title):
+def find_and_sort_related_papers(title):
     if title in ('N/A', '[N/A]', ['N/A']):
         return None
     RESULTS = {}
     #initialize serp api scraper
     project_settings = get_project_settings("serp_key.json")
     api_key = project_settings['springer_key_meta']
-    no_of_results = 3
+    no_of_results = 25
 
     doc = nlp(title)
     noun_chunks = list(doc.noun_chunks)
@@ -241,5 +241,47 @@ def find_related_papers(title):
             RESULTS.update({
                 f'{chunk}_{i}':[item['title'],item['abstract'],item['doi'],item['url'][0]['value']]
                 })
-         
+            
+    RESULTS = ranking_abstracts(RESULTS,title)
+    return RESULTS
+
+
+def ranking_abstracts(RESULTS,topic):
+	#Combine them in a hybrid scoring system:
+	#1.	Exact overlap boost  phrases that exactly appear in the topic/abstract get a high weight (say +2).
+	#2.	Semantic similarity score  compute cosine similarity of each phrase to the topic and/or the original abstract, normalize to [0,1].
+	#3.	Aggregate scoring 
+	#•	For each abstract, sum overlap_score + similarity_score.
+	#•	Normalize by number of phrases, so long abstracts dont dominate unfairly.
+	#4.	Rank abstracts by this hybrid score.
+	
+    model = KeyBERT()
+    doc_topic = nlp(topic.lower())
+
+     
+    for key in RESULTS:
+        abstract = RESULTS[key][1]
+        abstract_score = 0
+        results = (model.extract_keywords(abstract, keyphrase_ngram_range=(1,2),stop_words='english'))
+        keyphrase_list = []
+        for tup in results:
+            keyphrase_list.append(tup[0])
+
+        for keyphrase in keyphrase_list:
+            #+2 if keyphrases are in topic
+            if keyphrase in topic.lower():
+                abstract_score+= 2
+
+
+            #similarity scoring
+            keyphrase = nlp(keyphrase)
+            similarity = doc_topic.similarity(keyphrase)
+            abstract_score += similarity
+
+        #score_normalization
+        abstract_score_normalized = abstract_score/len(keyphrase_list)
+        #print(f'for {key}:{keyphrase_list} ,score {abstract_score} normalized to {abstract_score_normalized}')
+        RESULTS[key].append(abstract_score_normalized)
+        #print(RESULTS)
+    RESULTS =dict(sorted(RESULTS.items(), key=lambda x: x[1][-1], reverse=True))
     return RESULTS
