@@ -33,11 +33,10 @@ Follow the instructions provided on the webpage.
 
 ## Examples
 
-### Landing page/file upload
-
 ### Example results
-
+[See what it looks like](Lit_Buddy_demo.pdf)
 ### ScholarSift
+[See what it looks like](Scholar_Sift_demo.pdf)
 
 
 
